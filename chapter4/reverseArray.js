@@ -26,12 +26,12 @@ var reverseArray = function(arrayValues) {
 var reverseArrayInPlace = function(array) {
     for (var i =0; i <= Math.floor(array.length/2); i++) {
         var len = array.length;
-        var oppElement = len - 1 - i;
+        var oppElementPosition = len - 1 - i;
         var firstElement = array[i];
         console.log("The first element is " + firstElement);
-        console.log("The mirror element is " + oppElement);
-        array[i] = array[oppElement];
-        array[oppElement] = firstElement;
+        console.log("The mirror element is " + array[oppElementPosition]);
+        array[i] = array[oppElementPosition];
+        array[oppElementPosition] = firstElement;
         console.log(array);
     }
     return array;
@@ -42,4 +42,3 @@ console.log(reverseArray(["A", "B", "C"]));
 var arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
-// → [5, 4, 3, 2, 1]
